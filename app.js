@@ -17,7 +17,7 @@ app.get("/", (req, res)=>{
 })
 
 app.post("/", (req, res)=>{
-    res.json(req.body.test);
+    res.json((req.body.test) ? true : false);
 })
 
 app.use(middleware.notFound);
