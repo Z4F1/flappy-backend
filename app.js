@@ -12,6 +12,14 @@ app.use(express.json());
 
 app.use("/api", api);
 
+app.get("/", (req, res)=>{
+    res.json(true);
+})
+
+app.post("/", (req, res)=>{
+    res.json(req.body.test);
+})
+
 app.use(middleware.notFound);
 app.use(middleware.errorHandler);
 
